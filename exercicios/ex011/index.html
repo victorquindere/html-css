@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/imagem300.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/imagem700.png" type="image/png"> <!--MUDAR DE MIN PARA MAX E O TYPE PARA PNG OU JPEG-->
+        <img src="imagens/imagem1000.png" alt="Imagem Flexível"> 
+    </picture>
+    <h1>Reproduzindo Áudios</h1>
+    <p>Agora vamos aprender a inserir e reproduzir um áudio no seu site!</p>
+    <audio src="midia/illusions.mp3" controls autoplay></audio> <!--Formatos compatíveis são: mp3, wav e ogg-->
+
+    <h1>Mais exemplos de áudio</h1>
+    <p>Aqui um exemplo de como colocar para o site carregar vários formatos de arquivos de audio.</p>
+    
+    <audio preload="metadata" controls> <!--o pre load tem 3 parametros auto (só vai considerar que o site carregou depois que carregar tudo) metadata(carrega as informações) e none(não carrega nada, só depois do play)-->
+        <source src="midia/illusions.mp3" type="audio/mpeg">
+        <source src="midia/illusions.ogg" type="audio/ogg">
+        <source src="midia/illusions.wav" type="audio/wav">
+    </audio> <!--São apenas exemplos, o navegador tentará carregar do primeiro em diante primeiro mp3, depois ogg e depois o wav. -->
+   
+</body>
+</html>
